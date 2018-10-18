@@ -1,0 +1,9 @@
+<app-tabs
+	[tabs]="tabs"
+	[current]="currentTab"
+	(select)="onSelectTab($event)">
+</app-tabs>
+
+<div class="view">
+	<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,15 @@
+@import 'shared';
+
+:host {
+	@include col-max();
+	padding: 24px;
+}
+
+.view {
+	@include col-auto();
+	overflow: hidden;
+	padding: 12px;
+	margin-top: 12px;
+	border: solid 1px #E3E8EE;
+	border-radius: 3px;
+}

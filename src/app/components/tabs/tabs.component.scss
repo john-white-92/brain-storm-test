@@ -1,0 +1,54 @@
+@import 'shared';
+
+$tab-height: 42px;
+$tab-padding: 12px;
+
+$tab-border: #E3E8EE;
+$tab-border-current: #4A90E2;
+$tab-title: #111111;
+
+:host {
+	@include row-auto();
+}
+
+.row {
+	@include row-auto();
+	height: $tab-height;
+}
+
+.tab {
+	@include row-auto();
+	align-items: center;
+	position: relative;
+	min-width: 18px;
+	height: $tab-height;
+	&,
+	& * {
+		cursor: pointer;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2px;
+		background: $tab-border;
+		transition: background 0.2s ease;
+	}
+}
+
+.tab--current {
+	&:after {
+		background: $tab-border-current;
+	}
+}
+
+.tab__title {
+	@include line();
+	padding: 0 $tab-padding;
+	font-size: 16px;
+	text-align: center;
+	user-select: none;
+	color: $tab-title;
+}

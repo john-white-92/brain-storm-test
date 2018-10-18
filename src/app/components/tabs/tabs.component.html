@@ -1,0 +1,8 @@
+<ul class="row">
+	<li class="tab"
+		[ngClass]="{ 'tab--current' : tab === current }"
+		*ngFor="let tab of tabs"
+		(click)="onClick(tab)">
+		<p class="tab__title">{{tab.title}}</p>
+	</li>
+</ul>

@@ -1,0 +1,29 @@
+@mixin col-max () {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1 1 0px;
+}
+
+@mixin row-max () {
+	display: flex;
+	flex-flow: row nowrap;
+	flex: 1 1 0px;
+}
+
+@mixin col-auto () {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 0 0 auto;
+}
+
+@mixin row-auto () {
+	display: flex;
+	flex-flow: row nowrap;
+	flex: 0 0 auto;
+}
+
+@mixin line () {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
